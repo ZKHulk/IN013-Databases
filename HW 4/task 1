@@ -19,6 +19,5 @@ CREATE TABLE petEvent (
   eventtype VARCHAR(45),
   remark VARCHAR(150),
   FOREIGN KEY (petname) REFERENCES petPet(petname),
-  CONSTRAINT petEvent_ibfk_1
   PRIMARY KEY (petname, eventdate, eventtype)
 );
