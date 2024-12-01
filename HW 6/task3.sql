@@ -44,5 +44,12 @@ order by bill_total desc;
  and 	B.bill_no in (00014,00017)
  and 	R.headwaiter = S.headwaiter;
 
+-- 6
 
+select R.first_name, R.surname, S.first_name, S.surname
+ from 	restStaff R,  restStaff S, restRoom_management M
+ where 	R. staff_no = M.headwaiter 
+ and 	M.room_name = 'Blue'
+ and 	M.room_date = 160312
+ and 	R.staff_no 	=	S.headwaiter ;
 
